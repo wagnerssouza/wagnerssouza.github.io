@@ -1,6 +1,6 @@
 body{
     font-size: 62.5%; 
-	transition: .5s;
+	transition: .1s;
 	font-family: 'Open Sans', sans-serif;
 }
 a{
@@ -8,7 +8,7 @@ a{
 }
 p{
     font-size: 1.2em;
-    line-height: 1.4em;
+    line-height: 1.6em;
     margin-bottom: 1.2em;
 }
 h1, h2, h3, h4, h5, h6{
@@ -35,6 +35,59 @@ h3{
     width: 100%;
     clear: left;
 }
+
+
+/* HEADER */
+.header{
+    background: #000;
+    padding: 25px 0;
+}
+.logo{
+    display: inline-block;  
+}
+.logo img{  
+    max-width: 363px;
+    width: 100%;
+}
+.menu li a{
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+}
+.menu li a:hover{
+    color: #999;
+}
+
+/* menu drop */
+.logo-menu{
+    position: relative;
+}
+#nav-toggle{
+    position: absolute;
+    right: 0;
+    top: 47%;
+}
+#nav-toggle span, 
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  right: 0;
+  background: #fff;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px; 
+}
+/* menu drop */
+/* HEADER */
 
 @media (min-width: 481px) {
 	/*body{
@@ -111,6 +164,12 @@ h3{
  body{        
         font-size: 50%;
     }
+    .logo {     
+        text-align: left;
+    }
+    .logo img {
+        width: 75%;     
+    }   
 }
 /* SOMENTE MOBILE */
 
@@ -120,7 +179,24 @@ h3{
 /* SOMENTE TABLET */
 
 /* TABLET e MOBILE */
-@media (max-width: 1023px) {       
+@media (max-width: 1023px) {    
+    .menu li {
+        text-align: center;
+        
+        border-bottom: 1px #FFF solid;
+    } 
+    .menu li a {     
+        color: #FFF;
+        display: block;
+        padding: .8em;
+        font-size: 1.2em;
+    }
+    .menu-drop{
+        display: block;
+    }
+    .box-menu{
+        display: none;
+    }   
 }
 /* TABLET e MOBILE */
 
@@ -131,6 +207,23 @@ h3{
 
 /* SOMENTE DESK */
 @media (min-width: 1024px) {
+    .box-menu{
+        line-height: 4em;
+        display: block !important;
+        margin-top: 1em;
+    }   
+    .menu{
+        float: right;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu li a{     
+        padding: 1em;
+    }
+    .menu-drop{
+        display: none;
+    }   
 }
 /* SOMENTE DESK */
 /* medias */
