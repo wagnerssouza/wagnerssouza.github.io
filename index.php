@@ -13,7 +13,60 @@
 	</div>
 </div>
 
+<div class="box-full works">
 
+	<div class="conteudo content-center">
+		<div class="col-desk-3 col-tablet-6" style="background: red">
+			<a href="#" class="hover-works">
+				<span></span>
+				<img src="assets/images/trabalho.jpg" alt="">
+			</a>
+		</div>
+		<div class="col-desk-3 col-tablet-6" style="background: red">
+			<a href="#" class="hover-works">
+				<span></span>
+				<img src="assets/images/trabalho.jpg" alt="">
+			</a>
+		</div>
+		<div class="col-desk-3 col-tablet-6" style="background: red">
+			<a href="#" class="hover-works">
+				<span></span>
+				<img src="assets/images/trabalho.jpg" alt="">
+			</a>
+		</div>
+		<div class="col-desk-3 col-tablet-6" style="background: red">
+			<a href="#" class="hover-works">
+				<span></span>
+				<img src="assets/images/trabalho.jpg" alt="">
+			</a>
+		</div>
+		<div class="col-desk-3 col-tablet-6" style="background: red">
+			<a href="#" class="hover-works">
+				<span></span>
+				<img src="assets/images/trabalho.jpg" alt="">
+			</a>
+		</div>
+		<div class="col-desk-3 col-tablet-6" style="background: red">
+			<a href="#" class="hover-works">
+				<span></span>
+				<img src="assets/images/trabalho.jpg" alt="">
+			</a>
+		</div>
+		<div class="col-desk-3 col-tablet-6" style="background: red">
+			<a href="#" class="hover-works">
+				<span></span>
+				<img src="assets/images/trabalho.jpg" alt="">
+			</a>
+		</div>
+		<div class="col-desk-3 col-tablet-6" style="background: red">
+			<a href="#" class="hover-works">
+				<span></span>
+				<img src="assets/images/trabalho.jpg" alt="">
+			</a>
+		</div>
+	</div>
+
+</div>
 
 
 <?php
