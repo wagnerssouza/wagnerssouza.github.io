@@ -1,0 +1,66 @@
+/* formulario de contato */
+.form-contato{}
+.box-fields{
+	margin-bottom: 1em;
+}
+
+.box-fields label{
+	color: #f00;
+}
+.box-textarea {
+    margin-bottom: 0;
+}
+.box-fields, .box-fields span{
+	display: block;
+}
+.box-fields span {
+    margin-bottom: .4em;
+    font-size: 1.2em;
+}
+.input-default {
+    border: 1px #04112c solid;
+    font-size: .8em;
+    padding: .8em 1em;
+    width: 100%;
+    margin-bottom: .6em;
+    box-sizing: border-box;
+    outline: none;
+}
+.input-default.error, .box-message.error{
+	border: 1px #f00 solid;
+	background-color: #fee5e5;
+
+}
+.box-message{
+	border: 1px #04112c solid;
+	width: 100%;
+	min-height: 100px;
+	box-sizing: border-box;
+	font-size: .8em;
+	padding: .8em 1em;
+	margin-bottom: .6em;
+}
+.btn-enviar{
+	width: 100%;
+	border: none;
+	font-size: 1em;
+}
+.btn-enviar:hover{
+	cursor: pointer;
+}
+.parceiros h3{
+	margin-bottom: 1em;
+}
+.img-parceiros {
+    max-width: 279px;
+    width: 100%;
+}
+
+.texto-rodape{
+    text-align: center;
+    font-size: 1em;
+    color: #999;
+    margin-top: 2em;
+}
+/* formulario de contato */
+
