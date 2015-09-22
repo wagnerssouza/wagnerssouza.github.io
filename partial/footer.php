@@ -9,19 +9,17 @@
 			</ul>
 		</div>
 		<div class="col-desk-4 col-tablet-12">
-			<h3>Contatos</h3>
+			<h3>Redes sociais</h3>
 			<ul class="info-footer">
-				<li>contato@wagnersantos.com</li>
-				<li>5511 954829300</li>
-				<li>São Paulo - Brasil</li>
+				<li><a href="https://www.linkedin.com/in/wgrsantos" title="Linkedin - Wagner Santos Front-end Developer">Linkedin</a></li>
+				<li><a href="https://www.facebook.com/wagneersantos" title="Facebook - Wagner Santos Front-end Developer">Facebook</a></li>
+				<li><a href="https://github.com/wagnerssouza/" title="Github - Wagner Santos Front-end Developer">Github</a></li>
 			</ul>
 		</div>
 		<div class="col-desk-4 col-tablet-12">
-			<h3>Contatos</h3>
+			<h3>Sobre</h3>
 			<ul class="info-footer">
-				<li>contato@wagnersantos.com</li>
-				<li>5511 954829300</li>
-				<li>São Paulo - Brasil</li>
+				<li>Lorem Ipsum é simplesmente uma simulação simplesmente</li>
 			</ul>
 		</div>
 	</div>

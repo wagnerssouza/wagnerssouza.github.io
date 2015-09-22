@@ -5,6 +5,10 @@ body{
 }
 a{
     transition: .5s;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
 }
 p{
     font-size: 1.2em;
@@ -103,6 +107,10 @@ h3{
 }
 .info-footer{
     line-height: 1.6em;    
+}
+
+.info-footer a{
+    color: #1abc9c;
 }
 /* FOOTER */
 

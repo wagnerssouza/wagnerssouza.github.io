@@ -34,7 +34,7 @@
 				<img src="assets/images/trabalho.jpg" alt="">
 			</a>
 		</div>
-		<div class="item-work">
+		<div class="item-work margin-bottom-work-mobile">
 			<a href="#" class="hover-works">
 				<span></span>
 				<img src="assets/images/trabalho.jpg" alt="">

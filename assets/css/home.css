@@ -42,6 +42,9 @@
 
 /* SOMENTE MOBILE */
 @media (max-width: 480px) { 
+	.margin-bottom-work-mobile{
+		margin-bottom: 2%;
+	}
 	
 }
 /* SOMENTE MOBILE */
