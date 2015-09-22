@@ -1,3 +1,32 @@
+<footer class="box-full footer">
+	<div class="conteudo">
+		<div class="col-desk-4 col-tablet-12">
+			<h3>Contatos</h3>
+			<ul class="info-footer">
+				<li>contato@wagnersantos.com</li>
+				<li>5511 954829300</li>
+				<li>São Paulo - Brasil</li>
+			</ul>
+		</div>
+		<div class="col-desk-4 col-tablet-12">
+			<h3>Contatos</h3>
+			<ul class="info-footer">
+				<li>contato@wagnersantos.com</li>
+				<li>5511 954829300</li>
+				<li>São Paulo - Brasil</li>
+			</ul>
+		</div>
+		<div class="col-desk-4 col-tablet-12">
+			<h3>Contatos</h3>
+			<ul class="info-footer">
+				<li>contato@wagnersantos.com</li>
+				<li>5511 954829300</li>
+				<li>São Paulo - Brasil</li>
+			</ul>
+		</div>
+	</div>
+</footer>
+
 </section>
 		<script src="assets/js/jquery-2.1.4.min.js"></script>
 		<!--<script src="assets/js/jquery.validate.min.js"></script>

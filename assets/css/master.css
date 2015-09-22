@@ -89,6 +89,23 @@ h3{
 /* menu drop */
 /* HEADER */
 
+/* FOOTER */
+.footer{
+    padding-bottom: 0;
+    background: #2f2f2f;
+    color: #fff;
+    text-align: left;
+}
+.footer h3{
+    color: #fff;
+    text-transform: none;
+    font-weight: bold;
+}
+.info-footer{
+    line-height: 1.6em;    
+}
+/* FOOTER */
+
 @media (min-width: 481px) {
 	/*body{
 		background: green;
@@ -197,6 +214,9 @@ h3{
     .box-menu{
         display: none;
     }   
+    .info-footer{     
+        margin-bottom: 1.6em;
+    }
 }
 /* TABLET e MOBILE */
 
