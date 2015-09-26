@@ -31,9 +31,6 @@
 						</li>
 						<li>
 							<a href="#">Trabalhos</a>
-						</li>				
-						<li>
-							<a href="#">Contato</a>
 						</li>
 					</ul>
 				</nav>
