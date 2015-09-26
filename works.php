@@ -19,49 +19,49 @@
 		<div class="item-work margin-work">
 			<a href="#" class="hover-works">
 				<span></span>
-				<img src="assets/images/work-minuto-seguros.jpg" alt="">
+				<img src="assets/images/trabalho.jpg" alt="">
 			</a>
 		</div>
 		<div class="item-work margin-work margin-work-mobile">
 			<a href="#" class="hover-works">
 				<span></span>
-				<img src="assets/images/work-one-two.jpg" alt="">
+				<img src="assets/images/trabalho.jpg" alt="">
 			</a>
 		</div>
 		<div class="item-work margin-work">
 			<a href="#" class="hover-works">
 				<span></span>
-				<img src="assets/images/work-walmart.jpg" alt="">
+				<img src="assets/images/trabalho.jpg" alt="">
 			</a>
 		</div>
 		<div class="item-work margin-bottom-work-mobile">
 			<a href="#" class="hover-works">
 				<span></span>
-				<img src="assets/images/work-mobly.jpg" alt="">
+				<img src="assets/images/trabalho.jpg" alt="">
 			</a>
 		</div>
 		<div class="item-work margin-work">
 			<a href="#" class="hover-works">
 				<span></span>
-				<img src="assets/images/work-pro.jpg" alt="">
+				<img src="assets/images/trabalho.jpg" alt="">
 			</a>
 		</div>
 		<div class="item-work margin-work margin-work-mobile">
 			<a href="#" class="hover-works">
 				<span></span>
-				<img src="assets/images/work-xpg.jpg" alt="">
+				<img src="assets/images/trabalho.jpg" alt="">
 			</a>
 		</div>
 		<div class="item-work margin-work">
 			<a href="#" class="hover-works">
 				<span></span>
-				<img src="assets/images/work-mega-fashion.jpg" alt="">
+				<img src="assets/images/trabalho.jpg" alt="">
 			</a>
 		</div>
 		<div class="item-work">
 			<a href="#" class="hover-works">
 				<span></span>
-				<img src="assets/images/work-mmm.jpg" alt="">
+				<img src="assets/images/trabalho.jpg" alt="">
 			</a>
 		</div>
 	</div>
