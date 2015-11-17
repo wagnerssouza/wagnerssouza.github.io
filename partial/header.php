@@ -27,10 +27,10 @@
 							<a href="#">Página Inicial</a>
 						</li>
 						<li>
-							<a href="#">Sobre</a>
+							<a href="about.php">Sobre</a>
 						</li>
 						<li>
-							<a href="#">Trabalhos</a>
+							<a href="works.php">Trabalhos</a>
 						</li>
 					</ul>
 				</nav>
