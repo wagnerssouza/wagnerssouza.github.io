@@ -1,0 +1,169 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+@font-face { 
+	font-family: 'MontserratAlternates-Regular'; 
+	src: url('../font/MontserratAlternates-Regular.eot?#iefix') format('embedded-opentype'), 
+	url('../font/MontserratAlternates-Regular.woff') format('woff'), 
+	url('../font/MontserratAlternates-Regular.ttf') format('truetype'), 
+	url('../font/MontserratAlternates-Regular.svg#MontserratAlternates-Regular') format('svg'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+
+body{
+	background: #000;
+	font-family: 'MontserratAlternates-Regular', sans-serif;
+}
+
+h1{
+	
+	text-transform: uppercase;
+	font-size: 71px;
+	color: #fff;
+	font-weight: 700;
+}
+
+h2{
+	
+	font-size: 32px;	
+	color: #fff;
+	margin: 10px 0 20px 0;
+	-webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    -ms-font-smoothing: antialiased !important;
+    -o-font-smoothing: antialiased !important;
+    font-smoothing: antialiased !important;
+}
+
+
+
+.bodyid{
+	color: #ffb5ee;
+}
+ul{
+	display: inline-block;
+}
+ul li{
+	
+}
+ul li span{
+	color: #fff;
+    font-size: 20px;
+    background: url(../images/icon-accept.png) no-repeat 0px 2px;
+    
+    padding-left: 30px;
+    font-weight: 100;
+    line-height: 28px;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    -ms-font-smoothing: antialiased !important;
+    -o-font-smoothing: antialiased !important;
+    font-smoothing: antialiased !important;
+}
+
+.form-cadastro{
+	margin: 20px 0;
+}
+.form-cadastro input{
+	color: #757575;
+	font-size: 16px;
+	font-family: Arial;
+	-webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    -ms-font-smoothing: antialiased !important;
+    -o-font-smoothing: antialiased !important;
+    font-smoothing: antialiased !important;
+    border: 1px #b198be solid;
+    padding: 10px;
+    outline-color: #b198be;
+    width: 20%;
+    min-width: 230px;
+}
+.bt-enviar{
+	border: none;
+    background: #ac03f2;
+    color: #fff;
+    font-family: 'MontserratAlternates-Regular', sans-serif;
+    transition: .5s;
+    font-size: 20px;
+    /* padding: 8px; */
+    height: 40px;
+    position: relative;
+    top: 2px;
+    padding: 0 10px;
+}
+.bt-enviar:hover{
+	color: #ac03f2;
+	background: #fff;
+	cursor: pointer;	
+}
+
+
+div.table {
+ 	display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+}
+div.tr {
+    display: table-row;
+}
+div.td {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.transparencia {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #4a1f7f;
+	opacity: .7;
+}
+
+
+video { 
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg') no-repeat; background-size: cover;  -webkit-transition: 1s opacity; transition: 1s opacity; 
+}
+
+
+@media (max-width: 650px) { 
+	h1{
+		font-size: 55px;
+	}
+	h2{
+		font-size: 25px;
+	}
+	div.td {    
+    	padding: 0 10px;    
+	}
+	.form-cadastro input {    
+	    width: 85%;
+	}
+	.bt-enviar{
+		width: 88.5%;
+	}
+	.campo-email{
+		margin: 10px 0;	
+	}
+}
+
