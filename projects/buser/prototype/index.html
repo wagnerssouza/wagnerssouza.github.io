@@ -28,6 +28,9 @@
 
 	<div my-map=""></div>
 
+	<!-- container geral -->
+	<div class="main-content">
+
 	<!-- login -->
 	<div class="m-modal" ng-show="vm.boxLogin">
 		<div class="table">
@@ -105,7 +108,7 @@
 			                    </div>
 
 			                    <div class="box-buttons">
-			                        <button class="button-form">Cancelar</button> <button class="button-form">Cadastrar</button>
+			                        <button class="button-form">Cancelar</button> <button class="button-form" ng-click="vm.login()">Cadastrar</button>
 			                    </div>
 			                </form>                        
 			            </div>
@@ -120,7 +123,7 @@
 	<!-- login -->
 
 	<!-- header -->
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" ng-show="vm.showHeader">
 		<header class="mdl-layout__header">
 			<div>
 				<section class="box-search" ng-show="vm.boxSearch">
@@ -149,7 +152,7 @@
 		<div class="mdl-layout__drawer">
 			<span class="user-image-link">
 				<img ng-src="{{vm.user.image}}" alt="Image User" class="image-user" />
-				<a href="#" class="link-login"><strong>{{vm.user.email}}</strong></a>	
+				<a href="#" class="link-login" ng-click="vm.openLogin()"><strong>{{vm.user.email}}</strong></a>	
 			</span>
 			<nav class="mdl-navigation">
 			      <a class="mdl-navigation__link" href="#" ng-click="vm.favorite()" ng-show="vm.showFavoriteMenu">
@@ -167,12 +170,23 @@
 		</div>
 	</div>
 	<!-- header -->
-	
 
-	
+	<!-- header favorito -->
+	<div class="mdl-layout mdl-layout--fixed-header" ng-show="vm.showHeaderFavorito">
+		<header class="mdl-layout__header">
+			<a href="#" class="link-back-favorite" ng-click="vm.backFavorite()">
+				<p class="arrow-text-favorite">
+					<span class="icon-arrow"></span>
+					<span class="text-back-favorite">Favorito</span>
+				</p>
+			</a>
+			
+		</header>
+	</div>
+	<!-- header favorito -->
 
 	<!-- list bus -->
-	<div style="top: 63px;position: absolute;width: 100%;background: #fff;padding: 0px 50px; z-index: 2">
+	<div class="box-list-bus" style="">
 		<div ng-show="vm.showLines">
 			<ul class="list-bus">
 				<li ng-repeat="bus in vm.bus">
@@ -195,8 +209,8 @@
 	<!-- list bus -->
 
 	<!-- list favorite -->
-	<div style="top: 63px;position: absolute;width: 100%;background: #fff;padding: 0px 50px; z-index: 2">
-		<div ng-show="vm.showFavorite">
+	<div style="top: 63px;position: absolute;width: 100%;background: #fff;padding: 0px 50px; z-index: 2" ng-show="vm.showFavorite">
+		<div>
 			<ul class="list-bus">
 				<li ng-repeat="favoriteBus in vm.favoriteBus">
 					<a href="#" ng-click="vm.getMap(favoriteBus)">
@@ -217,23 +231,40 @@
 	</div>
 	<!-- list favorite -->
 
-
 	<!-- bus loading -->
-	<div class="m-modal bg-loading" ng-show="vm.bgLoading">
+	<div class="m-modal modal-loading" ng-show="vm.bgLoading">
 		<div class="table">
 			<div class="tr">
 			    <div class="td">
-			        <div class="modal-content">
-					<img src="assets/images/bus_loading.gif" alt="">
+			        <div class="modal-content content-loading">
+			        <div class="bg-loading"></div>
+					<!-- <img src="assets/images/bus_loading.gif" alt=""> -->
+					<img src="assets/images/bus-loading-2.gif" alt="">
 			        </div>
 			    </div>
 			</div>
 		</div>
 	</div>
 	<!-- bus loading -->
-		
-	
-	
+
+	<!-- bus loading page initial -->
+	<div class="m-modal modal-loading-initial" ng-show="vm.bgLoadingInitialPage">
+		<div class="table">
+			<div class="tr">
+			    <div class="td">
+			        <div class="modal-content content-loading">
+			        <div class="bg-loading"></div>
+					<!-- <img src="assets/images/bus_loading.gif" alt=""> -->
+					<img src="assets/images/bus-loading-2.gif" alt="">
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<!-- bus loading page initial -->
+
+	</div>
+	<!-- container geral -->
 	
 
 	<!-- AngularJS -->	
