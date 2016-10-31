@@ -106,7 +106,6 @@
  				if (vm.search.length > 3) {
 
  					vm.loading();
-
  					vm.boxLogin = false;
  					vm.showLines = true;
  					vm.bus = [];
@@ -154,6 +153,8 @@
  				vm.bgOpacity = false;
 				vm.showLines = false;
  				vm.showFavorite = false;
+ 				var linkLogin = angular.element(document.querySelector('.link-login'));
+ 				linkLogin.focus();
  				vm.loading();
  			};
 
