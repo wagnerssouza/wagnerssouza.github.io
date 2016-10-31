@@ -395,10 +395,10 @@ md-input-container.md-input-focused .md-input {
         top: 35px;
     }
 
-    .list-bus li .add-favorite {        
+    /*.list-bus li .add-favorite {        
         width: 25px;
         height: 25px;        
-    }
+    }*/
 
     .list-bus li .remove-favorite {        
         width: 25px;

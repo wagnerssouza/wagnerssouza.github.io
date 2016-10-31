@@ -46,6 +46,7 @@
 					'volta': 'Terminal Vila Nova Cachoeirinha'
 				}
 			];
+			var linkLogin = angular.element(document.querySelector('.link-login'));
 
 			angular.element(document).ready(function () {
 				vm.loadingInitial();
@@ -105,6 +106,9 @@
  			vm.getLines = () => {
  				if (vm.search.length > 3) {
 
+ 					
+ 					linkLogin.focus();
+
  					vm.loading();
  					vm.boxLogin = false;
  					vm.showLines = true;
@@ -153,7 +157,6 @@
  				vm.bgOpacity = false;
 				vm.showLines = false;
  				vm.showFavorite = false;
- 				var linkLogin = angular.element(document.querySelector('.link-login'));
  				linkLogin.focus();
  				vm.loading();
  			};
