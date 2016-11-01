@@ -1,0 +1,157 @@
+* {
+	box-sizing: border-box;
+}
+body{
+    font-size: 62.5%; 	
+	transition: .5s;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+
+}
+
+h2 {
+	font-size: 3em;
+	font-weight: bold;
+	color: #fff;
+}
+
+p {
+    font-size: 1.4em;
+    color: #fff;
+    line-height: 1.4em;
+}
+a {
+	text-decoration: none;
+	transition: .2s;
+}
+
+
+
+.logo {
+	
+	font-size: 3em;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+	
+}
+
+.site {
+    width: 100%;
+    font-size: 1.6em;
+}
+
+.box-full {
+    width: 100%;
+    padding: 4.5em 0;
+    margin: 0 auto;
+    display: table;
+    position: relative;
+}
+
+.content-default {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2em;
+    display: inherit;
+    position: relative;
+}
+
+/* menu */
+nav { 
+	float: right;
+	position: relative;
+}
+nav ul li{
+	float: left;
+}
+nav ul li a{
+	font-family: 'Source Sans Pro', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.6em;
+	padding: 0 2em;
+	transition: .2s;
+}
+
+nav ul li a:hover{
+	color: #B8EBEF;
+}
+
+
+
+/* menu */
+
+
+
+/* SOMENTE MOBILE */
+@media (max-width: 480px) { 	
+}
+/* SOMENTE MOBILE */
+
+/* SOMENTE TABLET */
+@media (min-width: 481px) and (max-width: 1023px) {	
+}
+/* SOMENTE TABLET */
+
+/* TABLET e MOBILE */
+@media (max-width: 1023px) {
+
+	#menu {
+		display: none;
+	}
+	h1 {		
+		margin-bottom: 5em;
+	}	
+	/*nav ul { 
+		display: none;
+	}*/
+	nav {
+		float: none;
+	}
+	/*nav ul {
+		display: none;
+	}*/
+	
+	nav ul li {
+		float: none;
+		text-align: center;
+		width: 100%;
+		margin-bottom: 2em;
+	}
+	#nav-toggle {
+		position: absolute;
+		right: 0;
+		top: -7em;
+		background: url(../images/icon-menu.png) no-repeat;
+		width: 30px;
+		height: 30px;
+	}
+}
+/* TABLET e MOBILE */
+
+/* TABLET e DESK */
+@media (min-width: 481px) {    
+}
+/* TABLET e DESK */
+
+/* SOMENTE DESK */
+@media (min-width: 1024px) {
+	.menu-drop {
+		display: none;
+	}
+	nav ul li:last-child a{
+		padding-right: 0;
+	}
+
+	body #menu {
+		display: block !important ;
+	}
+}
+/* SOMENTE DESK */

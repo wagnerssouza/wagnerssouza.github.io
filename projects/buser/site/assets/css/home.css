@@ -1,0 +1,482 @@
+
+::-webkit-input-placeholder {
+   color: #40b0bc;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #40b0bc;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #40b0bc;  
+}
+
+:-ms-input-placeholder {  
+   color: #40b0bc;  
+}
+
+
+
+.header {
+	background: #00acc1;
+}
+
+.header .content-default{
+	max-width: 1280px;
+}
+
+/*intro*/
+.introduction {
+	background: #00acc1;
+	height: 465px;
+	padding-top: 0;
+}
+.introduction .content-default {
+	text-align: center;
+}
+.bus {
+    width: 231px;
+    margin: 0 auto;
+    height: 99px;
+    display: block;
+    background: url(../images/bus.png);
+    z-index: 2;
+    position: relative;
+}
+.introduction p {
+	font-weight: 300;
+	padding: 0 4em;
+}
+
+.introduction p {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    font-size: 1.6em;
+    margin-top: 4em;
+}
+.introduction h2 {
+	margin-bottom: 1.5em;
+}
+
+/*intro*/
+
+
+.title-black {
+	color: #000;
+	text-align: center;
+	margin: 1em 0 2em 0;
+}
+
+.other-services .icon {
+	width: 100px;
+	height: 100px;
+	float: left;
+	display: block;
+	margin-right: 2em;
+	background: url(../images/icons-other-services.png);
+}
+.icon.traffic {
+	background-position: 0px 0px;
+}
+.icon.favorite {
+	background-position: 0px -205px;	
+}
+.icon.precision {
+	background-position: 0px -102px;
+}
+.icon.gps {
+	background-position: 0px -308px;
+}
+
+.list-other-services {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.list-other-services div {
+	display: inline-block;
+	padding: 0 2em;
+}
+
+.list-other-services li {
+    margin-bottom: 2em;
+    display: inline-block;
+}
+
+.list-other-services p{
+	width: initial;
+    margin: initial;
+    color: #000;
+    position: relative;
+    top: 1em;
+}
+
+
+
+/*app information*/
+.app-information {
+    background: #00acc1 url(../images/computer.png) no-repeat right 17px;
+    overflow: hidden;
+    padding: 12em 0;
+    /* background-size: contain; */
+}
+.app-information h2 {
+    color: #000;
+    margin-bottom: 1em;
+} 
+
+.app-information p {
+    color: #000;
+    margin-bottom: 2em;
+}
+.app-information .title-small {
+	color: #fff;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+.app-information .first-word {
+		color: #ffe57f;
+}
+
+.text-app-information {
+	padding: 4em 0 0 0; 
+}
+
+
+.img-computer {
+	float: right;
+	max-width: 100%;
+    width: 511px;
+}
+
+
+
+
+.first-word {
+		color: #00acc1;
+}
+
+.btn {
+	background: #ffd740;
+    color: #000;
+    font-size: 1.6em;
+    position: relative;
+    padding: .6em 1.2em;
+    z-index: 2;
+    border-radius: .3em;
+    top: 4em;
+}
+.btn:hover {
+	background: #ddb82d;
+}
+
+
+
+
+
+
+
+
+/* abas */
+
+.how-to {
+	background: #ffffff;
+}
+/* Target Tabs */
+
+.tabs-target span:nth-of-type(1):not(:target) ~ span:nth-of-type(2):not(:target) ~ .tab:nth-of-type(1),
+.tabs-target span:nth-of-type(2):target ~ .tab:nth-of-type(2),
+.tabs-target span:nth-of-type(1):target ~ .tab:nth-of-type(3)
+{
+  display: block;
+}
+
+
+
+/* Checked Tabs */
+
+.tabs-checked input:nth-of-type(2):not(:checked) ~ input:nth-of-type(3):not(:checked) ~ .tab:nth-of-type(1),
+.tabs-checked input:nth-of-type(2):checked ~ .tab:nth-of-type(2),
+.tabs-checked input:nth-of-type(3):checked ~ .tab:nth-of-type(3) 
+{
+  display: block;
+}
+
+
+
+/* Focus Tabs */
+
+.tabs-focus span.tab-link:nth-of-type(2):not(:focus) ~ span.tab-link:nth-of-type(3):not(:focus) ~ .tab:nth-of-type(3),
+.tabs-focus span.tab-link:nth-of-type(2):focus ~ .tab:nth-of-type(2),
+.tabs-focus span.tab-link:nth-of-type(3):focus ~ .tab:nth-of-type(1),
+.tabs-focus .tab:focus
+{
+  display: block;
+}
+
+.tabs-focus .tab:nth-of-type(1):focus ~ .tab:nth-of-type(3),
+.tabs-focus .tab:nth-of-type(2):focus ~ .tab:nth-of-type(3)
+{
+  display: none !important;
+}
+
+
+
+/* Hover Tabs */
+
+.tabs-hover .tab:nth-of-type(3),
+.tabs-hover span.tab-link:nth-of-type(2):hover ~ .tab:nth-of-type(2),
+.tabs-hover span.tab-link:nth-of-type(3):hover ~ .tab:nth-of-type(1),
+.tabs-hover .tab:hover
+{
+  display: block;
+}
+
+.tabs-hover span.tab-link:nth-of-type(2):hover ~ .tab:nth-of-type(3),
+.tabs-hover span.tab-link:nth-of-type(3):hover ~ .tab:nth-of-type(3),
+.tabs-hover .tab:nth-of-type(1):hover ~ .tab:nth-of-type(3),
+.tabs-hover .tab:nth-of-type(2):hover ~ .tab:nth-of-type(3)
+{
+  display: none !important;
+}
+
+.tab-link:nth-of-type(2) {
+    margin: 0 2%;
+}
+
+.tab-link {
+  font-size: 1.6em;
+  cursor: pointer;
+  color: #555;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  float: left;
+  width: 32%;
+  padding: 15px 25px 15px 25px;
+  border-top: 10px solid #FFD740;
+  opacity: .3;
+  transition: .5s;
+}
+
+.text-tab {
+  font-weight: 100;
+  line-height: 1.4em;
+}
+
+.tab-link:hover {
+  opacity: 1;
+  color: #666;
+}
+
+.tab img {
+    width: 497px;
+    max-width: 100%;
+}
+
+
+
+.tab {
+  clear: both;
+  text-align: center;
+  padding: 25px;
+  display: none;
+}
+
+.target-fix {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+.tabs-focus .tab-link:focus,
+.tabs-hover .tab-link:hover,
+#tabC:target ~ a:nth-of-type(3),
+#tabB:target ~ a:nth-of-type(2),
+#tabC:not(:target) ~ #tabB:not(:target) ~ a:nth-of-type(1),
+#tab-C:checked ~ label:nth-of-type(3),
+#tab-B:checked ~ label:nth-of-type(2),
+#tab-B:not(:checked) ~ #tab-C:not(:checked) ~ label:nth-of-type(1) {
+  
+  opacity: 1;
+}
+
+.tabs-focus .tab-link:focus:after,
+.tabs-hover .tab-link:hover:after,
+#tabC:target ~ a:nth-of-type(3):after,
+#tabB:target ~ a:nth-of-type(2):after,
+#tabC:not(:target) ~ #tabB:not(:target) ~ a:nth-of-type(1):after,
+#tab-C:checked ~ label:nth-of-type(3):after,
+#tab-B:checked ~ label:nth-of-type(2):after,
+#tab-B:not(:checked) ~ #tab-C:not(:checked) ~ label:nth-of-type(1):after {
+  position: absolute;
+  content: "";
+  margin: 5px 0 0 0;
+  width: 55px;
+  height: 1px;
+  display: block;
+}
+
+.tab-title {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.tab-title span {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.tab-area .number {
+  color: #00838F;
+}
+
+
+
+    /* abas */
+
+.other-services {
+	background: #ffe57f;
+}
+
+.contact {
+	background: #00838f;
+}
+.contact h2 {
+  color: #59c2ce;
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+
+.contact h2 span {
+  color: #fff;
+}
+.input-email {
+  border: 1px #40b0bc solid;
+  color: #40b0bc;
+  padding: .5em;
+  background: transparent;
+  outline: none;
+  float: left;
+}
+
+.button-email {
+    background: #00acc1 url(../images/button-email.png) no-repeat;
+    border: none;
+    width: 57px;
+    height: 35px;
+    outline: none;
+}
+
+.button-email:focus {
+    border: none;    
+    outline: none;
+}
+
+.button-email:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+.contact p {
+    text-align: center;    
+    padding: 0 15em;
+    margin-bottom: 2em;
+}
+.contact div {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    max-width: 241px;    
+}
+/*.img-note:before {
+  content: " ";
+  width: 511px;
+  top: -26%;
+  height: 634px;
+  background: url(../images/computer.png) no-repeat;
+  position: absolute;
+  right: -22%;  
+}*/
+
+
+.footer {
+  background: #fff;
+  padding: 2em 0;
+}
+
+.footer .content-default{
+  max-width: 1280px;
+}
+.footer .logo,
+.footer nav ul li a {
+  color: #000;
+}
+
+
+.footer h2 {
+    font-size: inherit;
+    text-align: center;
+}
+
+/* SOMENTE MOBILE */
+@media (max-width: 480px) { 	
+}
+/* SOMENTE MOBILE */
+
+/* SOMENTE TABLET */
+@media (min-width: 481px) and (max-width: 1023px) {	
+}
+/* SOMENTE TABLET */
+
+/* TABLET e MOBILE */
+@media (max-width: 1023px) {
+	.other-services .icon {
+	    margin: 0 auto;
+	    float: none;
+	}
+
+	.list-other-services div {
+		padding: 0 2em;
+	}
+	.list-other-services p {
+		text-align: center;
+	}
+
+  .list-other-services li {
+      text-align: center;
+      margin-bottom: 6em;
+  }
+
+  .img-note:before {
+      display: none;
+  }
+
+  .app-information {
+      background-image: none;
+      padding: 4.5em 0;      
+  }
+
+  .footer nav {
+    display: none;
+  }
+
+      
+}
+/* TABLET e MOBILE */
+
+/* TABLET e DESK */
+@media (min-width: 481px) {    
+}
+/* TABLET e DESK */
+
+/* SOMENTE DESK */
+@media (min-width: 1024px) {
+}
+/* SOMENTE DESK */
+
+
+
+
+
+

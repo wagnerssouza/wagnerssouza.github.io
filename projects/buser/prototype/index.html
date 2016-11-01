@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Buser</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/styles/static.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css" />
+
+</head>
+<body ng-controller="homeController as vm">
+
+<div class="bg" ng-show="vm.bgOpacity"></div>
+
+<style> 	
+	
+</style>
+
+	<div my-map=""></div>
+
+	<!-- container geral -->
+	<div class="main-content">
+
+	<!-- login -->
+	<div class="m-modal" ng-show="vm.boxLogin">
+		<div class="table">
+			<div class="tr">
+			    <div class="td">
+			        <div class="modal-content">
+
+			        <header class="form-signup" ng-init="vm.acessar = true">
+			        
+			        	<ul>
+			        		<li><a href="#" ng-click="vm.viewBoxAcessar()">Acessar</a></li>
+			        		<li><a href="#" ng-click="vm.viewBoxCadastrar()">Cadastrar</a></li>
+			        	</ul>
+
+			            <div class="acessar" ng-show="vm.acessar">
+			                <form name="projectForm">
+			                <p ng-show="vm.messageError" class="messageError">E-mail ou senha inválidos</p>
+			                    <div layout="row">
+			                        <md-input-container flex="100">
+			                            <label class="text-label">Email</label>
+			                            <input type="email" required="" name="email" ng-model="vm.userEmail">
+			                            <div ng-messages="projectForm.email.$error">
+			                                <div ng-message="required">Campo obrigatório.</div>
+			                                <div ng-message="email">email errado.</div>
+			                            </div>
+			                        </md-input-container>     
+			                    </div>
+			                    <div layout="row">
+			                        <md-input-container flex="100">
+			                            <label class="text-label">Senha</label>
+			                            <input type="password" required="" name="senha" ng-model="vm.userSenha">
+			                            <div ng-messages="projectForm.senha.$error">
+			                                <div ng-message="required">Campo obrigatório.</div>
+			                            </div>
+			                        </md-input-container>        
+			                    </div>
+
+			                    <div class="box-buttons">
+			                        <button class="button-form">Cancelar</button> <button class="button-form" ng-click="vm.login()">Login</button>
+			                    </div>
+			                </form>
+			            </div>
+
+			            <div ng-show="vm.cadastrar" >
+
+			                <form name="projectForm">
+			                    <div layout="row">
+			                        <md-input-container flex="100">
+			                            <label class="text-label">Email</label>
+			                            <input type="email" required="" name="email" ng-model="project.email">
+			                            <div ng-messages="projectForm.email.$error">
+			                                <div ng-message="required">Campo obrigatório.</div>
+			                                <div ng-message="email">email errado.</div>
+			                            </div>
+			                        </md-input-container>     
+			                    </div>
+
+			                    <div layout="row">
+			                        <md-input-container flex="100">
+			                            <label class="text-label">Senha</label>
+			                            <input type="password" required="" name="senha" ng-model="project.senha">
+			                            <div ng-messages="projectForm.senha.$error">
+			                                <div ng-message="required">Campo obrigatório.</div>
+			                            </div>
+			                        </md-input-container>        
+			                    </div>
+			                    <div layout="row">
+			                        <md-input-container flex="100">
+			                            <label class="text-label">Repetir senha</label>
+			                            <input type="password" required="" name="repetirsenha" ng-model="project.repetirsenha">
+			                            <div ng-messages="projectForm.repetir.$error">
+			                                <div ng-message="required">Campo obrigatório.</div>
+			                            </div>
+			                        </md-input-container>        
+			                    </div>
+
+			                    <div class="box-buttons">
+			                        <button class="button-form">Cancelar</button> <button class="button-form" ng-click="vm.login()">Cadastrar</button>
+			                    </div>
+			                </form>                        
+			            </div>
+
+			        </header>
+
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<!-- login -->
+
+	<!-- header -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" ng-show="vm.showHeader">
+		<header class="mdl-layout__header">
+			<div>
+				<section class="box-search" ng-show="vm.boxSearch">
+					<div class="box-search-content">
+						<input 
+							type="text" 
+							class="search-bus"
+							placeholder="Buscar ônibus" 
+							ng-model="vm.search"
+							ng-change="vm.getLines()"
+							 />
+					</div>
+				</section>
+			</div>
+			<div>
+				<h6 class="title-buser">
+					<strong>Buser</strong>
+				</h6>
+
+				<div class="box-icon-user" ng-style="{'border-left': vm.borderIconUser()}">
+				
+					<img ng-src="{{vm.user.image}}" alt="User Name" class="image-user-right" />
+				</div>
+			</div>
+		</header>
+		<div class="mdl-layout__drawer">
+			<span class="user-image-link">
+				<img ng-src="{{vm.user.image}}" alt="Image User" class="image-user" />
+				<a href="#" class="link-login" ng-click="vm.openLogin()"><strong>{{vm.user.email}}</strong></a>	
+			</span>
+			<nav class="mdl-navigation">
+			      <a class="mdl-navigation__link" href="#" ng-click="vm.favorite()" ng-show="vm.showFavoriteMenu">
+			      	<i class="material-icons">star</i>
+			      	<strong>Favoritos</strong>
+			      </a>
+			</nav>
+			<h6 class="information-buser">Informações do Buser</h6>
+		    <nav class="mdl-navigation">
+		      <a class="mdl-navigation__link" href="#"><i class="material-icons">settings</i> <strong>Configurações</strong></a>
+		      <a class="mdl-navigation__link" href="#"><i class="material-icons">format_quote</i> <strong>Sobre</strong></a>
+		      <a class="mdl-navigation__link" href="#"><i class="material-icons">help</i> <strong>Ajuda</strong></a>
+		      <a class="mdl-navigation__link" href="#"> <i class="material-icons">restore</i> <strong>Versão</strong></a>
+		    </nav>
+		</div>
+	</div>
+	<!-- header -->
+
+	<!-- header favorito -->
+	<div class="mdl-layout mdl-layout--fixed-header" ng-show="vm.showHeaderFavorito">
+		<header class="mdl-layout__header">
+			<a href="#" class="link-back-favorite" ng-click="vm.backFavorite()">
+				<p class="arrow-text-favorite">
+					<span class="icon-arrow"></span>
+					<span class="text-back-favorite">Favorito</span>
+				</p>
+			</a>
+			
+		</header>
+	</div>
+	<!-- header favorito -->
+
+	<!-- list bus -->
+	<div class="box-list-bus" style="">
+		<div ng-show="vm.showLines">
+			<ul class="list-bus">
+				<li ng-repeat="bus in vm.bus">
+					<a href="#" ng-click="vm.getMap(bus)">
+						<span class="ico-bus"></span>
+						<div>
+							<p>{{bus.numero}}</p>
+							<p class="text-big">{{bus.ida}}</p>
+							<p>{{bus.volta}}</p>	
+						</div>
+					</a>
+					<a href="#" 
+						title="Adicionar para favoritos" 
+						class="button-bus add-favorite"
+						ng-click="vm.addFavorite(bus)"></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- list bus -->
+
+	<!-- list favorite -->
+	<div class="box-list-bus" ng-show="vm.showFavorite">
+		<div>
+			<ul class="list-bus">
+				<li ng-repeat="favoriteBus in vm.favoriteBus">
+					<a href="#" ng-click="vm.getMap(favoriteBus)">
+						<span class="ico-bus"></span>
+						<div>
+							<p>{{favoriteBus.numero}}</p>
+							<p>{{favoriteBus.ida}}</p>
+							<p>{{favoriteBus.volta}}</p>	
+						</div>
+					</a>
+					<a href="#" 
+						title="Adicionar para favoritos" 
+						class="button-bus remove-favorite"
+						ng-click="vm.removeFavorite(favoriteBus)"></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- list favorite -->
+
+	<!-- bus loading -->
+	<div class="m-modal modal-loading" ng-show="vm.bgLoading">
+		<div class="table">
+			<div class="tr">
+			    <div class="td">
+			        <div class="modal-content content-loading">
+			        <div class="bg-loading"></div>
+					<!-- <img src="assets/images/bus_loading.gif" alt=""> -->
+					<img src="assets/images/bus-loading-2.gif" alt="">
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<!-- bus loading -->
+
+	<!-- bus loading page initial -->
+	<div class="m-modal modal-loading-initial" ng-show="vm.bgLoadingInitialPage">
+		<div class="table">
+			<div class="tr">
+			    <div class="td">
+			        <div class="modal-content content-loading">
+			        <div class="bg-loading"></div>
+					<!-- <img src="assets/images/bus_loading.gif" alt=""> -->
+					<img src="assets/images/bus-loading-2.gif" alt="">
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<!-- bus loading page initial -->
+
+	</div>
+	<!-- container geral -->
+	
+
+	<!-- AngularJS -->	
+	<script src="assets/scripts/angular.min.js"></script>
+
+	<!-- rotas -->
+	<script src="assets/scripts/angular-ui-router.js"></script>
+
+	<!-- modulo principal -->
+	<script src="app/modules/app.module.js"></script>
+
+	<!-- Nosso arquivo de configuracao -->
+	<script src="app/config/app.config.js"></script>
+
+	<!-- controller -->
+	<script src="app/controllers/home.controller.js"></script>
+	
+	<!-- constants -->
+	<script src="app/constants/app.constants.js"></script>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBCnVGOgQm7z8bp9pfWZup2CRbVsSWpnU&sensor=false"></script>
+	
+	<script src="app/directives/buser.directive.js"></script>
+
+</body>
+</html>
