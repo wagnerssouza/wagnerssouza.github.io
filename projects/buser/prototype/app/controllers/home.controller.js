@@ -151,14 +151,17 @@
                     drawer.toggleClass('is-visible');
                     obfuscator.toggleClass('is-visible');
                 }
- 			}
+ 			};
 
- 			vm.getMap = () => {
+ 			vm.getMap = (bus) => {
+
+ 				var busClicked = bus;
  				vm.bgOpacity = false;
 				vm.showLines = false;
  				vm.showFavorite = false;
  				linkLogin.focus();
  				vm.loading();
+ 				vm.search = busClicked.numero;
  			};
 
  			vm.favorite = () => {
