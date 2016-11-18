@@ -1,0 +1,90 @@
+@import 'tabs'
+
+body
+	font-family: sans-serif
+
+.main
+	max-width: 715px
+	margin: 2em auto
+	display: table
+	width: 100%
+
+body h1
+	font-size: 2.3em
+	color: #333
+	margin: 1em 0
+
+.product-image,
+.information
+	float: left
+	
+.product-image
+	margin-right: 4em
+
+#zoom-default img
+	width: 100%	
+
+.information .ch-price
+	font-size: 2.8em
+	margin-bottom: .6em
+
+.information .ch-price sup
+	font-size: .5em
+	line-height: 1.5em
+
+.form-mercado-livre label
+	display: block
+
+.form-mercado-livre .first-label
+	margin-bottom: .5em
+
+.form-mercado-livre label span
+	width: 70px
+	display: inline-block
+
+.form-mercado-livre .text-mercado-livre
+	display: block
+
+.form-mercado-livre .button-buy
+	margin: .5em 0
+
+.carousel-products
+	width: 400px
+	margin-left: -50px
+
+
+@media (max-width: 748px)
+	.carousel-products
+		width: 100%
+		margin-left: 0
+
+	.product-image
+		margin-right: 0
+		text-align: center
+		width: 100%
+		margin-bottom: .5em
+
+	#zoom-default img
+		width: initial
+
+	body h1
+		line-height: 45px
+		text-align: center
+
+	.information
+		margin: 0 auto
+		float: none
+		width: 311px
+		margin-bottom: 1em
+
+	// .carousel-products
+	// 	max-width: 400px
+	// 	margin-left: 0
+	// 	width: 75%
+
+
+@media (max-width: 320px)
+	#zoom-default img
+		width: 100%
+
+

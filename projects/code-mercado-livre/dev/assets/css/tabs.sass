@@ -1,0 +1,57 @@
+.information-tabs
+	display: inline-block
+	width: 100%
+	margin-top: 1em
+
+.tabs-target span:nth-of-type(1):not(:target) ~ span:nth-of-type(2):not(:target) ~ .tab:nth-of-type(1),
+.tabs-target span:nth-of-type(2):target ~ .tab:nth-of-type(2)
+	display: block
+
+.tabs-focus .tab-link:focus,
+.tabs-hover .tab-link:hover,
+#questions:target ~ a:nth-of-type(2),
+#questions:not(:target) ~ a:nth-of-type(1),
+#questions:checked ~ label:nth-of-type(2),
+#tab-B:not(:checked) ~ label:nth-of-type(1)
+	opacity: 1
+	position: relative
+	top: 2px
+	border-bottom: 0
+
+.tab-link
+	cursor: pointer
+	color: #000 !important
+	background: #999
+	text-decoration: none
+	display: block
+	float: left
+	opacity: 0.5
+	border: 1px #000 solid
+	transition: 0.2s
+	border-radius: 0px 5px 0 0
+	padding: .5em
+
+.tab-link:hover
+	opacity: 1
+	text-decoration: none
+
+.tab
+	clear: both
+	padding: 25px
+	display: none
+	border: 1px #000 solid
+
+.tab p
+	margin: 1em 0
+
+.buyer
+	color: #3a87ad
+
+.seller
+	color: #468847
+
+.target-fix
+	display: block
+	top: 0
+	left: 0
+	position: fixed
